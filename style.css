@@ -425,8 +425,6 @@ section .title::after{
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
-}.teams .carousel{
-display:block;
 }
 .teams .carousel .card{
     background: #222;
@@ -437,7 +435,7 @@ display:block;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: rgb(43, 123, 248);
+    background: rgb(56, 67, 233);
 }
 .teams .carousel .card .box{
     display: flex;
@@ -458,15 +456,6 @@ display:block;
     height: 150px;
     width: 150px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid blue;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card .mypic{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    transform:rotate(-45deg);
     border-radius: 50%;
     border: 5px solid blue;
     transition: all 0.3s ease;
@@ -495,7 +484,6 @@ display:block;
 .owl-dot:hover{
     background: blue!important;
 }
-
 /* contact section styling */
 .contact .title::after{
     content: "get in touch";
