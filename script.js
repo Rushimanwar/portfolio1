@@ -53,7 +53,7 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
-
+});
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
@@ -75,7 +75,7 @@ $(document).ready(function(){
             }
         }
     });
-});
+
 
 function rmore(){
     var r = document.getElementById('more');
