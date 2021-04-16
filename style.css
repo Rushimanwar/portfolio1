@@ -10,6 +10,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+	overflow-x: hidden;
+}
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -30,7 +33,7 @@ html{
 
 /* costom selection */
 ::selection{
-    background-color: rgb(35, 192, 30);
+    background-color: rgb(108, 253, 103);
     color: #fff;
 }
 
@@ -182,12 +185,12 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/20210407_170212_0000.png")  center;
+    background: url("images/bg2.jpg")  center;
     height: 100vh;
     color: rgb(19, 18, 18);
     min-height: 500px;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
@@ -198,30 +201,24 @@ section .title::after{
   margin-right: 0;
 }
 .home .home-content .text-1{
+    position: relative;
+    margin-top: 20px;
     font-size: 27px;
-    margin-top: -0px;
+    color: #fff;
+    
 }
 .home .home-content .text-2{
-    position: absolute;
-    margin-top: -17px;
+    position: relative;
     font-size: 75px;
-    font-weight: 600;
+    font-weight:bold;
     margin-left: -3px;
-    clip-path: polygon(0% 0,56% 0,82.5% 100%,0% 100%);
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
-.home .home-content .text-4{
-    position: absolute;    
-    margin-top: -17px;
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-    clip-path: polygon(56% 0,100% 0,100% 100%,82.7% 100%);
-    color: rgb(255, 255, 255);
-}
+
 .home .home-content .text-3{
+    position: relative;
     font-size: 40px;
-    margin: 75px 0 0 0;
+    color: #fff;
 }
 .home .home-content .text-3 span{
     color: blue;
@@ -252,24 +249,12 @@ section .title::after{
 .about .about-content .left{
     width: 45%;
 }
-.about .about-content .left .img1{
-    position:absolute;
-    height: 350px;
-    width: 350px;
-    margin-left:50px;
+.about .about-content .left img{
+    height: 380px;
+    width: 380px;
+    margin-left:5px;
     object-fit: cover;
-    transform:rotate(-45deg);
     border-radius: 6px;
-}
-.about .about-content .left .img2{
-    position:relative;
-    margin-left:-100px;
-    margin-top:-70px;
-    height:500px;
-    width: 600px;
-    border-radius: 6px;
-    mix-blend-mode:screen;
-
 }
 .about .about-content .right{
     width: 55%;
@@ -517,7 +502,7 @@ section .title::after{
     width: calc(50% - 30px);
 }
 .contact .contact-content .text{
-    font-size: 20px;
+    font-size: 1.35rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -530,10 +515,13 @@ section .title::after{
 .contact .contact-content .row{
     display: flex;
     height: 65px;
+    width: 99%;
     align-items: center;
 }
 .contact .contact-content .row .info{
     margin-left: 30px;
+    font-size: 1.24rem;
+    width: 80%;
 }
 .contact .contact-content .row i{
     font-size: 25px;
@@ -641,29 +629,19 @@ footer span a:hover{
 
 /* responsive media query start */
 @media (max-width: 1104px) {
-    .about .about-content .left  .img1{
-        height: 350px;
-        width: 350px;
-        margin-left: -20px;
-        position: absolute;
-    }
-    .about .about-content .left  .img1{
-        height: 350px;
-        width: 330px;
-        position: absolute;
+    .about .about-content .left  img{
+        max-height: 85%;
+        max-width: 85%;
     }
     .navbar.sticky{
-        width: 95%;
+        width: 100%;
     }
     .scroll-up-btn{
-        margin-right: 8%;
+        margin-right: 5%;
     }
     .about .about-content .right .text1{
         display: block;
         font-size: 1.2rem;
-    }
-    .about .about-content .right .text{
-        display: none;
     }
 }
 
@@ -702,23 +680,8 @@ footer span a:hover{
         margin: 20px 0;
         font-size: 25px;
     }
-    .home .home-content .text-1{
-        color: blue;
-    }
-    .home .home-content .text-5{
-        font-size: 45px;
-        clip-path: none;
-        display: block;
-        font-weight: bold;
-        color: rgb(155, 6, 36);
-    }
-    .home .home-content .text-4{
-        font-size: 70px;
-        display: none;
-    }
     .home .home-content .text-2{
         font-size: 70px;
-        display: none;
     }
     .home .home-content .text-3{
         font-size: 35px;
@@ -768,20 +731,12 @@ footer span a:hover{
     }.home .home-content{
         margin-top: 10%;
     }
-    .home .home-content .text-1{
-        color: blue;
+    .about .about-content .left  .img{
+        height: 50px;
+        width: 30px;
     }
     .home .home-content .text-2{
-        font-size: 60px;
-        clip-path: none;
-    }
-    .home .home-content .text-4{
-        font-size: 60px;
-        display: none;
-    }
-    .home .home-content .text-3{
-        font-size: 32px;
-        margin-top: 0px;
+        font-size: 35px;
     }
     .home .home-content a{
         font-size: 20px;
@@ -809,10 +764,6 @@ footer span a:hover{
         margin-top: 1%;
         clip-path: none;
     }
-    .home .home-content .text-4{
-        font-size: 50px;
-        display: none;
-    }
     .home .home-content .text-3{
         font-size: 27px;
     }
@@ -827,6 +778,10 @@ footer span a:hover{
     .contact .right form .email{
         margin: 0;
     }
+    .contact .contact-content .row .info{
+        font-size: 1rem;
+       font-size-adjust: 0.12rem;
+    }
     .right form .error-box{
        width: 150px;
     }
@@ -838,4 +793,12 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+@media (max-width:320px) {
+    .contact .contact-content .row .info{
+        font-size: 0.7548rem;
+       font-size-adjust: 0.12rem;
+    }
+    
 }
