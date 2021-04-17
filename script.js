@@ -77,24 +77,22 @@ $(document).ready(function(){
     });
 
 
-function rmore(){
-    var r = document.getElementById('more');
-    var m = document.getElementById('readmore');
-    var l = document.getElementById('readless');
-    r.style.display="block";
-    m.style.display="none";
-    l.style.display="block";
 
-};
-function rless(){
-    var r = document.getElementById('more');
-    var m = document.getElementById('readmore');
-    var l = document.getElementById('readless');
-    r.style.display="none";
-    m.style.display="block";
-    l.style.display="none";
 
-};
+$(document).ready(function() {
+    $("#toggle").click(function(){
+        var more = $("#toggle").text();
+        if(more == "Read More"){
+            $("#toggle").text("Read Less");
+            $("#more").slideDown(2000);
+        }else{
+            $("#toggle").text("Read More");
+            $("#more").slideUp(2000);
+        }
+    });
+
+});
+
 
 // contact form Script
 
@@ -108,7 +106,7 @@ function sendmail(){
 
     // var body = $('#body').val();
 
-    var Body='Name: '+name+'<br>Subject: '+subject+'<br>Message:'+message;
+    var Body='Name: '+name+'<br>Subject: '+subject+'<br>Message: '+message;
     //console.log(name, phone, email, message);
 
     Email.send({
