@@ -374,6 +374,7 @@ section .title::after{
 #readless, #more{
     display: none;
     margin: 10px 0;
+    
 }
 .skills .skills-content .left a:hover{
     color: blue;
@@ -435,7 +436,10 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: rgb(56, 67, 233);
+    background: rgb(6, 168, 233);
+}
+.mypic{
+    transform: rotate(-45deg);
 }
 .teams .carousel .card .box{
     display: flex;
@@ -484,6 +488,8 @@ section .title::after{
 .owl-dot:hover{
     background: blue!important;
 }
+
+
 /* contact section styling */
 .contact .title::after{
     content: "get in touch";
@@ -619,12 +625,19 @@ footer span a:hover{
 
 /* responsive media query start */
 @media (max-width: 1104px) {
+    
+    .navbar .logo img{
+        margin: 5px;
+        max-height: 55px;
+        max-width: 70px;
+    }
     .about .about-content .left  img{
         max-height: 85%;
         max-width: 85%;
     }
     .navbar.sticky{
         width: 100%;
+        padding: 0 10px;
     }
     .scroll-up-btn{
         margin-right: 5%;
@@ -637,7 +650,7 @@ footer span a:hover{
 
 @media (max-width: 991px) {
     .max-width{
-        padding: 0 0px;
+        padding: 0 10px;
     }
 }
 @media (max-width: 947px){
@@ -658,6 +671,11 @@ footer span a:hover{
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
+    }
+    .navbar .logo img{
+        margin: 5px;
+        max-height: 45px;
+        max-width: 60px;
     }
     .navbar .menu.active{
         left: 0;
@@ -715,10 +733,17 @@ footer span a:hover{
         margin-right: 1.5%;
     }
     .max-width{
-        max-width: 100%;
+        width: 100%;
         padding: 0 23px;
         margin:0;
-    }.home .home-content{
+
+    }
+    .navbar .logo img{
+        margin: 5px;
+        max-height: 30px;
+        max-width: 50px;
+    }
+    .home .home-content{
         margin-top: 10%;
     }
     .about .about-content .left  .img{
@@ -738,13 +763,18 @@ footer span a:hover{
 
 @media (max-width: 500px) {
     .max-width{
-        max-width: 100%;
+        width: 100%;
     }
     .home{
         height: 60vh;
     }
     .menu-btn{
         margin-right: 1.5%;
+    }
+    .navbar .logo img{
+        margin: 5px;
+        max-height: 35px;
+        max-width: 50px;
     }
     .home .home-content{
         margin-top: 30%;
